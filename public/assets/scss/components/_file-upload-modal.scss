@@ -1,0 +1,214 @@
+.file-upload-modal {
+  .modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .modal-header {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1.25rem 1.5rem;
+
+    .modal-title {
+      font-weight: 600;
+      color: #2f2f3b;
+      font-size: 1.25rem;
+    }
+
+    .btn-close {
+      font-size: 0.8rem;
+    }
+  }
+
+  .modal-body {
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .preview-section {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+
+    .preview-circle {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background-color: #f2f3f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #eef1f6;
+        transform: scale(1.02);
+      }
+
+      .placeholder-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: #EDF2F9;
+        
+        .placeholder-text {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #718096;
+          letter-spacing: -1px;
+        }
+
+        .hover-icon {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.2);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          
+          svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+          }
+        }
+      }
+
+      &:hover .hover-icon {
+        opacity: 1;
+      }
+
+      img, video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .action-section {
+    margin-bottom: 1.5rem;
+
+    .gradient-upload-btn {
+      background: linear-gradient(90deg, #b794f4 0%, #63b3ed 100%);
+      border: none;
+      border-radius: 8px;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      color: white;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(99, 179, 237, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(99, 179, 237, 0.4);
+        opacity: 0.95;
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .info-section {
+    margin-bottom: 1.5rem;
+
+    .constraint-text {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .limit-text {
+      color: #666;
+      font-size: 1rem;
+    }
+  }
+
+  .input-section {
+    .status-textarea-wrapper {
+      position: relative;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background: #fff;
+      padding: 0.5rem;
+      transition: border-color 0.2s;
+
+      &:focus-within {
+        border-color: #b794f4;
+      }
+
+      textarea {
+        width: 100%;
+        border: none;
+        resize: none;
+        min-height: 80px;
+        padding: 0.5rem;
+        font-size: 1.1rem;
+        color: #333;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: #a0aec0;
+        }
+      }
+
+      .char-counter {
+        text-align: right;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+        color: #718096;
+      }
+    }
+  }
+}
+
+.dark-only {
+  .file-upload-modal {
+    .modal-content {
+      background-color: #262932;
+    }
+
+    .modal-header {
+      border-bottom-color: #374558;
+      .modal-title {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    .preview-circle {
+      background-color: #1d1e26;
+      .placeholder-icon {
+        color: #374558;
+      }
+    }
+
+    .input-section .status-textarea-wrapper {
+      background-color: #1d1e26;
+      border-color: #374558;
+      textarea {
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+    
+    .info-section {
+      .constraint-text { color: #666; }
+      .limit-text { color: #aaa; }
+    }
+  }
+}
