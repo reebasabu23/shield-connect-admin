@@ -57,4 +57,5 @@ export const ROUTES = {
   TEAM_MANAGEMENT: '/admin/team-management',
   AUTO_MODERATION: '/admin/auto-moderation',
   ANALYTICS: '/admin/analytics',
+  SUPPORT: '/admin/support',
 } as const

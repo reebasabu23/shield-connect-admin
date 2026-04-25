@@ -111,6 +111,13 @@ export const SidebarMenuList: MenuItem[] = [
         type: 'link',
         path: ROUTES.AUTO_MODERATION,
       },
+      {
+        title: 'support',
+        id: 301,
+        icon: 'support-tickets',
+        type: 'link',
+        path: ROUTES.SUPPORT,
+      },
     ],
   },
   {
