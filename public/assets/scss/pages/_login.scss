@@ -1,6 +1,7 @@
 /**=====================
     1.0 Login CSS Start
 ==========================**/
+@use "sass:color";
 @use "../utils/variables" as *;
 
 .login-wrapper {
@@ -170,7 +171,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-          background: darken(#216fb0, 5%);
+          background: color.adjust(#216fb0, $lightness: -5%);
           transform: translateY(-1px);
           box-shadow: 0 6px 16px rgba(33, 111, 176, 0.3);
           cursor: pointer;
