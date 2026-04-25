@@ -20,7 +20,7 @@ export const SidebarMenuList: MenuItem[] = [
       {
         title: 'queue',
         id: 100,
-        icon: 'list',
+        icon: 'task',
         type: 'sub',
         path: ROUTES.ALL_QUEUE,
         Items: [
@@ -57,7 +57,7 @@ export const SidebarMenuList: MenuItem[] = [
       {
         title: 'analytics',
         id: 150,
-        icon: 'analytics',
+        icon: 'charts',
         type: 'link',
         path: ROUTES.ANALYTICS,
       },

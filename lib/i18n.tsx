@@ -5,6 +5,7 @@ import { initReactI18next } from 'react-i18next'
 
 // Get saved language from localStorage
 const getSavedLanguage = (): string | null => {
+  if (typeof window === 'undefined') return null
   try {
     const saved = localStorage.getItem('selected_language')
     return saved || null

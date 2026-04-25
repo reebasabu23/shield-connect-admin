@@ -48,7 +48,7 @@ const EditProfileForm: FC<EditProfileProps & { onCancel: () => void }> = ({
         country_code: data?.user?.country_code || '',
         phone: data?.user?.phone || '',
         email: data?.user?.email || '',
-        bio: data?.user.bio || '',
+        bio: data?.user?.bio || '',
       }}
       validationSchema={yupObject({
         first_name: nameWithoutSpacesSchema('First Name'),

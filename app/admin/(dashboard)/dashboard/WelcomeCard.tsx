@@ -14,7 +14,7 @@ const WelcomeCard = () => {
         <CardBody className="welcome-card">
           <Image src="/welcome-bg.png" alt="welcome" />
           <div className="welcome-content">
-            <h2>Welcome {data?.user.name || 'Admin'}</h2>
+            <h2>Welcome {data?.user?.name || 'Admin'}</h2>
             <p>Here’s what’s happening in your chat app today</p>
             <Button onClick={() => router.push('/profile')}>View Profile</Button>
           </div>

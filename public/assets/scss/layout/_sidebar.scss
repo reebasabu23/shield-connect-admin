@@ -1,4 +1,4 @@
-﻿/**=====================
+/**=====================
   5.7 Sidebar CSS Start
 ==========================**/
 @use "sass:color";
@@ -2009,7 +2009,8 @@
 
                         .sidebar-link {
                           transition: all 0.5s ease;
-                          display: block;
+                          display: flex;
+                          align-items: center;
 
                           &::after {
                             position: absolute;
@@ -2480,7 +2481,8 @@
               }
 
               .sidebar-title {
-                display: block;
+                display: flex;
+                align-items: center;
                 padding: 20px 0;
                 border-bottom: 1px solid #f3f3f3;
               }

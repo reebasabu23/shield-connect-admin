@@ -9,7 +9,19 @@ export const stringify = (value: unknown): string => {
 }
 
 export const getStorage = () => {
-  return localStorage
+  if (typeof window !== 'undefined') {
+    return localStorage
+  }
+
+  // Fallback for SSR
+  return {
+    getItem: () => null,
+    setItem: () => {},
+    removeItem: () => {},
+    clear: () => {},
+    key: () => null,
+    length: 0,
+  } as Storage
 }
 
 export const getToken = () => {
@@ -19,6 +31,7 @@ export const getToken = () => {
 }
 
 export const getParam = (key: string): string | null => {
+  if (typeof window === 'undefined') return null
   const href = window.location.href
   const url = new URL(href)
   return url.searchParams.get(key) ?? null

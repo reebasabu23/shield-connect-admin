@@ -3,19 +3,18 @@
 import { useState, useEffect } from 'react'
 import { Container, Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap'
 import { useTranslation } from 'react-i18next'
-import { useRouter, usePathname, useParams, useSearchParams } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 import { ROUTES } from '@/lib/constants'
-import EscalationsTab from './EscalationsTab'
-import ApprovedTab from './ApprovedTab'
-import RejectedTab from './RejectedTab'
-import AllTab from './AllTab'
-import './queue.scss'
+import EscalationsTab from '../EscalationsTab'
+import ApprovedTab from '../ApprovedTab'
+import RejectedTab from '../RejectedTab'
+import AllTab from '../AllTab'
+import '../queue.scss'
 
 const Queue = () => {
   const { t } = useTranslation()
   const pathname = usePathname()
   const router = useRouter()
-  const navigate = (path: any) => router.push(path)
   const [activeTab, setActiveTab] = useState('1')
 
   useEffect(() => {
