@@ -12,7 +12,7 @@ const SupportStats = () => {
       title: t('open_tickets'),
       count: 1,
       color: 'primary',
-      bgColor: 'rgba(43, 95, 96, 0.05)',
+      bgColor: 'rgba(212, 37, 84, 0.05)',
     },
     {
       title: t('pending_tickets'),

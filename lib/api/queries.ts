@@ -77,7 +77,11 @@ const queries = {
       ...options,
     }),
   useGetSMSGateways: (params?: Params) =>
-    useApiGet<SMSGateway[]>([KEYS.ALL_SMS_GATEWAYS, params], () => get(URL_KEYS.SMSGateway.GetAllGateways, params)),
+    useApiGet<SMSGateway[] | SMSGatewayListResponse>([KEYS.ALL_SMS_GATEWAYS, params], () =>
+      get(URL_KEYS.SMSGateway.GetAllGateways, params),
+    ),
+  useGetAllGateways: () =>
+    useApiGet<SMSGatewayListResponse>([KEYS.GET_GATEWAYS], () => get(URL_KEYS.SMSGateway.GetAllGateways)),
   useGetAnnouncements: (params: Params) =>
     useApiGet<AnnouncementsResponse>([KEYS.GET_MESSAGE, params], () => get(URL_KEYS.Messages.GetAnnouncement, params)),
   useGetPlans: (params: Params) =>

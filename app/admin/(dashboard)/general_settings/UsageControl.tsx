@@ -23,13 +23,19 @@ const UsageControl = () => {
   const { data: getAllGateways } = queries.useGetAllGateways()
   const { data: activeLanguage, isPending: activePending } = queries.useFetchActiveLanguages()
 
+  const gatewaysArray: SMSGateway[] = Array.isArray(gatewaysData)
+    ? (gatewaysData as SMSGateway[])
+    : gatewaysData && typeof gatewaysData === 'object' && Array.isArray((gatewaysData as any).data)
+    ? (gatewaysData as any).data
+    : []
+
   const typeOptions: SelectOption[] = [
-    ...(gatewaysData?.map((gateway: SMSGateway) => {
+    ...gatewaysArray.map((gateway: SMSGateway) => {
       return {
         label: gateway.name,
         value: gateway.name.toLowerCase(),
       }
-    }) || []),
+    }),
     ...(getAllGateways?.data ? [{ label: 'Custom', value: 'custom' }] : []),
   ]
 

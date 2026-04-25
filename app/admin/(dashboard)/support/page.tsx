@@ -47,9 +47,21 @@ const SupportPage = () => {
       <style jsx global>{`
         body { background-color: #f8f9fa; }
         .bg-light { background-color: #f8f9fa !important; }
-        .text-primary { color: #2b5f60 !important; }
-        .bg-primary { background-color: #2b5f60 !important; }
-        .btn-primary { background-color: #2b5f60 !important; border-color: #2b5f60 !important; }
+        .text-primary { color: #D42554 !important; }
+        .bg-primary { 
+          background: linear-gradient(135deg, #D42554 0%, #EB3667 100%) !important; 
+          border: none !important;
+        }
+        .btn-primary { 
+          background: linear-gradient(135deg, #D42554 0%, #EB3667 100%) !important; 
+          border: none !important;
+          transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+          opacity: 0.9;
+          transform: translateY(-1px);
+          box-shadow: 0 5px 15px rgba(212, 37, 84, 0.3) !important;
+        }
       `}</style>
     </Container>
   )

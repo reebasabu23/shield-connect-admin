@@ -11,7 +11,7 @@ const SupportSidebar = () => {
   return (
     <div className="support-sidebar">
       {/* Response Times Card */}
-      <Card className="border-0 shadow-sm mb-4" style={{ backgroundColor: 'rgba(43, 95, 96, 0.05)', borderRadius: '15px' }}>
+      <Card className="border-0 shadow-sm mb-4" style={{ backgroundColor: 'rgba(212, 37, 84, 0.05)', borderRadius: '15px' }}>
         <CardBody className="p-4">
           <div className="d-flex align-items-center mb-4 text-primary">
             <Clock className="me-2" size={18} />

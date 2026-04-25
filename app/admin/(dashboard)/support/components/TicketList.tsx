@@ -123,12 +123,16 @@ const TicketList = () => {
       </CardBody>
 
       <style jsx>{`
-        .bg-soft-primary { background-color: rgba(43, 95, 96, 0.1); }
+        .bg-soft-primary { background-color: rgba(212, 37, 84, 0.1); }
         .bg-soft-warning { background-color: rgba(255, 184, 0, 0.1); }
         .bg-soft-success { background-color: rgba(35, 159, 103, 0.1); }
         .bg-soft-danger { background-color: rgba(235, 54, 103, 0.1); }
         .hover-bg-light:hover { background-color: #f8f9fa; }
         .transition-all { transition: all 0.2s ease-in-out; }
+        .nav-pills .nav-link.active {
+          background: linear-gradient(135deg, #D42554 0%, #EB3667 100%) !important;
+          box-shadow: 0 4px 10px rgba(212, 37, 84, 0.2);
+        }
       `}</style>
     </Card>
   )
