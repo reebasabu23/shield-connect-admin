@@ -25,7 +25,7 @@ export const SolidButton: FC<SolidButtonProps> = ({
       type={type ? type : 'button'}
       color={color ? color : ''}
       disabled={loading || disabled ? true : false}
-      className={`${className ? className : ''} ${loading ? 'btn-loader-disabled' : ''} btn-solid`}
+      className={`${className ? className : ''} ${loading ? 'btn-loader-disabled' : ''} btn-solid d-flex align-items-center justify-content-center gap-2`}
     >
       {loading ? (
         <div className="common-flex gap-2">

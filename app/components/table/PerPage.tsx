@@ -20,7 +20,7 @@ const PerPage: FC<PerPageProps> = ({ itemsPerPage, perPageValues = [15, 25, 50, 
       <label className="mb-0">{t('Show')}:</label>
 
       <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-        <DropdownToggle tag={'div'} className="form-control custom-control">
+        <DropdownToggle tag={'div'} className="form-control custom-control d-flex align-items-center justify-content-center">
           <span>{itemsPerPage}</span>
           <SvgIcon iconId="drop-down" className="common-svg-md ms-2" />
         </DropdownToggle>

@@ -16,10 +16,11 @@ const getSavedLanguage = (): string | null => {
 
 const savedLanguage = getSavedLanguage()
 
-i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
+if (typeof window !== 'undefined' && !i18n.isInitialized) {
+  i18n
+    .use(LanguageDetector)
+    .use(initReactI18next)
+    .init({
     lng: savedLanguage || undefined,
     resources: {
       en: {
@@ -183,6 +184,7 @@ i18n
           add_new_stickers: 'Add New Stickers',
           edit_stickers: 'Edit Stickers',
           update_stickers_information: 'Update stickers information',
+          stickers_deleted_successfully: 'Stickers deleted successfully',
           enter_host: 'Enter Host',
           enter_port: 'Enter Port',
           enter_your_smtp_username: 'Enter Smtp User',
@@ -255,14 +257,6 @@ i18n
           enter_your_from_number: 'Enter your from number',
           auth_method: 'Auth Method',
           expires_at: 'Expires At',
-          view_and_manage_sponsored_status: 'view and manage sponsored status',
-          add_new_status: 'Add New Status',
-          update_status_information: 'Update status information',
-          stickers_deleted_successfully: 'stickers deleted successfully',
-          delete_status_title: 'Delete Status',
-          delete_multiple_status_description: 'Delete Multiple Status',
-          status_deleted_successfully: 'status deleted successfully',
-          failed_to_delete_status: 'failed to delete status',
           allow_user_signup: 'Allow User Signup',
           new_announce: 'New Announcement',
           add_new_announce: 'Add New Announcement',
@@ -300,15 +294,14 @@ i18n
           pages: 'Pages',
           faqs: 'FAQs',
           sponsor: 'Sponsor',
-          sponsored_status: 'Sponsored Status',
           announcements: 'Announcements',
           communication: 'Communication',
           email_configuration: 'Email Configuration',
           system_settings: 'System Settings',
+          configuration: 'Configuration',
           languages: 'Languages',
           general_settings: 'General Settings',
           sms_gateways: 'SMS Gateways',
-          custom_sms_gateways: 'Custom SMS Gateways',
           frontend_settings: 'Logos & Svg Color',
           media_chat_settings: 'Media & Chat Settings',
           report_settings: 'Report Settings',
@@ -463,9 +456,9 @@ i18n
           resolved_count: 'Resolved ({{count}})',
           response_times: 'Response Times',
           urgent: 'Urgent',
-          high: 'High',
-          normal: 'Normal',
-          low: 'Low',
+          priority_high: 'High',
+          priority_normal: 'Normal',
+          priority_low: 'Low',
           quick_docs: 'Quick Docs',
           quickstart_guide: 'Quickstart Guide',
           get_up_and_running_in_15_minutes: 'Get up and running in 15 minutes',
@@ -489,5 +482,6 @@ i18n
       escapeValue: false,
     },
   })
+}
 
 export default i18n

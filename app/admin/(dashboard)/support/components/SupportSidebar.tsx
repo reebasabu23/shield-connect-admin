@@ -20,9 +20,9 @@ const SupportSidebar = () => {
           <div className="response-list">
             {[
               { label: t('urgent'), time: '< 2 hours', color: 'text-primary' },
-              { label: t('high'), time: '< 4 hours', color: 'text-danger' },
-              { label: t('normal'), time: '1 business day', color: 'text-warning' },
-              { label: t('low'), time: '2 business days', color: 'text-muted' },
+              { label: t('priority_high'), time: '< 4 hours', color: 'text-danger' },
+              { label: t('priority_normal'), time: '1 business day', color: 'text-warning' },
+              { label: t('priority_low'), time: '2 business days', color: 'text-muted' },
             ].map((item, i) => (
               <div key={i} className="d-flex justify-content-between align-items-center mb-3 small">
                 <span className={`fw-medium ${item.color}`}>{item.label}</span>

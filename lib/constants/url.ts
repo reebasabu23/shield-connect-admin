@@ -92,18 +92,6 @@ const URL = {
   Mail: {
     TestMail: 'send-test-email',
   },
-  CustomSMSGateways: {
-    getAllGateways: 'custom/sms',
-    saveGateway: 'custom/sms/save',
-    testGateway: 'custom/sms/test',
-  },
-  SponsoredStatuses: {
-    getSponsoredStatuses: 'status/sponsored',
-    getById: 'status/sponsored/:id',
-    Delete: 'status/delete',
-    Create: 'status/create',
-    Update: 'status/update/:id',
-  },
   Messages: {
     SendMessage: 'announcement/send',
     GetAnnouncement: 'announcement/fetch',

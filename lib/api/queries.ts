@@ -15,8 +15,6 @@ import type {
   ReportedAccountsResponse,
   ReportReasonResponse,
   SettingsResponse,
-  SmsGatewayResponse,
-  SponsoredStatusResponse,
   StickersListResponse,
   UserListResponse,
   VerificationRequestsResponse,
@@ -80,17 +78,6 @@ const queries = {
     }),
   useGetSMSGateways: (params?: Params) =>
     useApiGet<SMSGateway[]>([KEYS.ALL_SMS_GATEWAYS, params], () => get(URL_KEYS.SMSGateway.GetAllGateways, params)),
-  useGetAllGateways: () =>
-    useApiGet<SmsGatewayResponse>([KEYS.ALL_GATEWAY], () => get(URL_KEYS.CustomSMSGateways.getAllGateways)),
-  useGetSponsoredStatuses: (params: Params) =>
-    useApiGet<SponsoredStatusResponse>([KEYS.GET_SPONSORED_STATUSES, params], () =>
-      get(URL_KEYS.SponsoredStatuses.getSponsoredStatuses, params),
-    ),
-  useGetSponsoredStatusById: (id: string | undefined) =>
-    useApiGet<{ status: any }>([KEYS.GET_SPONSORED_STATUSES, id], () =>
-      get(URL_KEYS.SponsoredStatuses.getById.replace(':id', id || '')),
-      { enabled: !!id },
-    ),
   useGetAnnouncements: (params: Params) =>
     useApiGet<AnnouncementsResponse>([KEYS.GET_MESSAGE, params], () => get(URL_KEYS.Messages.GetAnnouncement, params)),
   useGetPlans: (params: Params) =>

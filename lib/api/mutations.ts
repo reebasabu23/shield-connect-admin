@@ -4,9 +4,6 @@ import type {
   CreateFAQPayload,
   CreatePagePayload,
   CreatePlanPayload,
-  CreateStatusResponse,
-  DeleteStatusPayload,
-  DeleteStatusResponse,
   Message,
   RemoveMemberResponse,
   ReportedAccountsPayload,
@@ -57,8 +54,6 @@ const mutations = {
     ),
   useTestMail: () =>
     useApiPost<TestMailFormValues, void>([KEYS.TEST_MAIL], (input) => post(URL_KEYS.Mail.TestMail, input)),
-  useSaveGateway: () => useApiPost([KEYS.SAVE_GATEWAY], (input) => post(URL_KEYS.CustomSMSGateways.saveGateway, input)),
-  useTestGateway: () => useApiPost([KEYS.TEST_GATEWAY], (input) => post(URL_KEYS.CustomSMSGateways.testGateway, input)),
   useDeleteUser: () =>
     useApiPost([KEYS.DELETE_USER, KEYS.ALL_USERS], (input: { ids: string[] }) =>
       remove(URL_KEYS.Users.DeleteUser, input),
@@ -207,18 +202,6 @@ const mutations = {
         post(URL_KEYS.SMSGateway.ToggleGatewayStatus.replace(':id', input.id.toString()), {
           enabled: input.enabled,
         }),
-    ),
-  useDeleteStatus: () =>
-    useApiPost<DeleteStatusPayload, DeleteStatusResponse>([KEYS.DELETE_STATUS, KEYS.GET_SPONSORED_STATUSES], (input) =>
-      remove(URL_KEYS.SponsoredStatuses.Delete, input),
-    ),
-  useCreateStatus: () =>
-    useApiPost<FormData, CreateStatusResponse>([KEYS.CREATE_STATUS, KEYS.GET_SPONSORED_STATUSES], (input) =>
-      post(URL_KEYS.SponsoredStatuses.Create, input),
-    ),
-  useUpdateStatus: () =>
-    useApiPost<{ id: string; data: FormData }, any>([KEYS.UPDATE_STATUS, KEYS.GET_SPONSORED_STATUSES], ({ id, data }) =>
-      put(URL_KEYS.SponsoredStatuses.Update.replace(':id', id), data),
     ),
   useRegister: () => useApiPost([KEYS.REGISTER], (input) => post(URL_KEYS.Users.CreateUser, input)),
   useSendAnnouncement: () =>

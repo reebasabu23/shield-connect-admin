@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.scss";
-import "@/lib/i18n";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {

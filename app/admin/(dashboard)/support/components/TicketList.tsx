@@ -16,7 +16,7 @@ const TicketList = () => {
       statusKey: 'pending',
       statusColor: 'warning',
       tags: ['API Bug'],
-      priority: t('high'),
+      priority: t('priority_high'),
       priorityColor: 'danger',
       title: 'grooming-score returning 0.00 on all requests',
       updated: 'Mar 21, 2026 — 09:02 UTC',

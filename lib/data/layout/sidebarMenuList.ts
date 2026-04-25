@@ -118,18 +118,18 @@ export const SidebarMenuList: MenuItem[] = [
         type: 'link',
         path: ROUTES.SUPPORT,
       },
+      {
+        title: 'email_configuration',
+        id: 10,
+        icon: 'email',
+        type: 'link',
+        path: ROUTES.EMAIL_CONFIGURATION,
+      },
     ],
   },
   {
     title: 'content',
     Items: [
-      {
-        title: 'pages',
-        id: 5,
-        icon: 'sample-page',
-        type: 'link',
-        path: ROUTES.PAGES,
-      },
       {
         title: 'faqs',
         id: 6,
@@ -151,25 +151,11 @@ export const SidebarMenuList: MenuItem[] = [
         type: 'link',
         path: ROUTES.STICKERS,
       },
-      {
-        title: 'plans',
-        id: 9,
-        icon: 'plan',
-        type: 'link',
-        path: ROUTES.PLANS,
-      },
     ],
   },
   {
-    title: 'sponsor',
+    title: 'communication',
     Items: [
-      {
-        title: 'sponsored_status',
-        id: 10,
-        icon: 'sidebar-status',
-        type: 'link',
-        path: ROUTES.SPONSORED_STATUS,
-      },
       {
         title: 'announcements',
         id: 5,
@@ -177,25 +163,6 @@ export const SidebarMenuList: MenuItem[] = [
         type: 'link',
         path: ROUTES.ANNOUNCEMENTS,
         iconClass: 'announcements-icon',
-      },
-    ],
-  },
-  {
-    title: 'communication',
-    Items: [
-      {
-        title: 'contact_inquiries',
-        id: 11,
-        icon: 'authenticate',
-        type: 'link',
-        path: ROUTES.CONTACT_INQUIRIES,
-      },
-      {
-        title: 'email_configuration',
-        id: 10,
-        icon: 'email',
-        type: 'link',
-        path: ROUTES.EMAIL_CONFIGURATION,
       },
     ],
   },
@@ -210,32 +177,11 @@ export const SidebarMenuList: MenuItem[] = [
         path: ROUTES.GENERAL_SETTINGS,
       },
       {
-        title: 'languages',
-        id: 17,
-        icon: 'language',
-        type: 'link',
-        path: ROUTES.LANGUAGES,
-      },
-      {
         title: 'sms_gateways',
         id: 12,
         icon: 'sms-icon',
         type: 'link',
         path: ROUTES.SMS_GATEWAYS,
-      },
-      {
-        title: 'custom_sms_gateways',
-        id: 13,
-        icon: 'sms-custom',
-        type: 'link',
-        path: ROUTES.CUSTOM_SMS_GATEWAY,
-      },
-      {
-        title: 'frontend_settings',
-        id: 14,
-        icon: 'logos',
-        type: 'link',
-        path: ROUTES.FRONTEND_SETTINGS,
       },
       {
         title: 'media_chat_settings',
