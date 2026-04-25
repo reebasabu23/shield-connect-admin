@@ -10,9 +10,9 @@ $tag-input-color: rgba(var(--primary-color), 0.1);
 $tag-border-color: rgba(25, 158, 224, 0.2);
 
 // Brand Colors Palette (User Requested)
-$primary-color: #216FB0;      // Main brand color
-$secondary-color: #5C91CE;    // Complementary blue
-$primary-light: #BF95FF;      // Soft purple
+$primary-color: #D42554;      // Main brand color
+$secondary-color: #EB3667;    // Complementary pink/red
+$primary-light: #FFE5E9;      // Soft pink
 $teal-accent: #4fd1c5;        // Branding and status
 
 // Theme colors variables
@@ -62,8 +62,8 @@ $light-white: #f9f9fb;
 $light-dark: #eaebf2;
 $folder-color: #efa000;
 // gradient colors
-$gradient-primary: linear-gradient(135deg, $primary-light 0%, $secondary-color 50%, $primary-color 100%);
-$gradient-bg-primary: linear-gradient(135deg, $primary-light 0%, $secondary-color 100%);
+$gradient-primary: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+$gradient-bg-primary: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
 
 // Utility classes
 .w-40 {

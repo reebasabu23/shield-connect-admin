@@ -15,14 +15,14 @@
 }
 
 .purchase-btn {
-  background: linear-gradient(90deg, var(--theme-default) -18.33%, #563ee0 62.78%);
+  background: linear-gradient(90deg, var(--theme-default) -18.33%, var(--theme-secondary) 62.78%);
   padding: 12px 20px;
   min-width: 200px;
   border: none;
   transition: 0.5s;
 
   &:hover {
-    background: linear-gradient(90deg, #563ee0 -18.33%, var(--theme-default) 62.78%);
+    background: linear-gradient(90deg, var(--theme-secondary) -18.33%, var(--theme-default) 62.78%);
     transition: 0.5s;
   }
 
@@ -291,7 +291,7 @@ $btn-light-color: $light-primary, $light-secondary, $light-success, $light-warni
 @each $btn-name, $btn-color in (primary, $primary-color), (secondary, $secondary-color), (success, $success-color),
 (danger, $danger-color), (info, $info-color), (light, $light-color), (dark, $dark-color), (warning, $warning-color) {
   .btn-air-#{$btn-name} {
-    box-shadow: 0 5px 10px 2px rgba(88, 103, 221, 0.19) !important;
+    box-shadow: 0 5px 10px 2px rgba(212, 37, 84, 0.19) !important;
 
     &:hover,
     &:active,

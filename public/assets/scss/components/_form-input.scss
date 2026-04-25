@@ -95,7 +95,7 @@
     // transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    color: #216fb0;
+    color: $primary-color;
     z-index: 10;
   }
 
@@ -113,8 +113,8 @@
 
     &:focus {
       background: #ffffff;
-      border-color: #216fb0;
-      box-shadow: 0 0 0 3px rgba(33, 111, 176, 0.1);
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba(212, 37, 84, 0.1);
       outline: none;
     }
 

@@ -96,7 +96,7 @@
             // transform: translateY(-50%);
             width: 20px;
             height: 20px;
-            color: #216fb0;
+            color: $primary-color;
             z-index: 10;
           }
 
@@ -114,8 +114,8 @@
 
             &:focus {
               background: #ffffff;
-              border-color: #216fb0;
-              box-shadow: 0 0 0 3px rgba(33, 111, 176, 0.1);
+              border-color: $primary-color;
+              box-shadow: 0 0 0 3px rgba(212, 37, 84, 0.1);
               outline: none;
             }
 
@@ -149,7 +149,7 @@
         .forgot-link {
           font-size: 14px;
           font-weight: 600;
-          color: #216fb0;
+          color: $primary-color;
           text-decoration: none;
 
           &:hover {
@@ -164,16 +164,16 @@
         border-radius: 10px;
         font-size: 16px;
         font-weight: 600;
-        background: #216fb0;
+        background: $primary-color;
         border: none;
         color: white;
-        box-shadow: 0 4px 12px rgba(33, 111, 176, 0.2);
+        box-shadow: 0 4px 12px rgba(212, 37, 84, 0.2);
         transition: all 0.3s ease;
 
         &:hover {
-          background: color.adjust(#216fb0, $lightness: -5%);
+          background: color.adjust($primary-color, $lightness: -5%);
           transform: translateY(-1px);
-          box-shadow: 0 6px 16px rgba(33, 111, 176, 0.3);
+          box-shadow: 0 6px 16px rgba(212, 37, 84, 0.3);
           cursor: pointer;
         }
 
@@ -191,7 +191,7 @@
       color: #718096;
 
       a {
-        color: #216fb0;
+        color: $primary-color;
         font-weight: 600;
         text-decoration: none;
 
@@ -230,7 +230,7 @@
         color: #2d3748;
 
         &:focus {
-          border-color: #216fb0;
+          border-color: $primary-color;
           background: #ffffff;
           outline: none;
         }

@@ -99,7 +99,7 @@
     margin-bottom: 1.5rem;
 
     .gradient-upload-btn {
-      background: linear-gradient(90deg, #b794f4 0%, #63b3ed 100%);
+      background: linear-gradient(90deg, #D42554 0%, #EB3667 100%);
       border: none;
       border-radius: 8px;
       padding: 0.75rem 2rem;
@@ -107,11 +107,11 @@
       color: white;
       font-size: 1.1rem;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(99, 179, 237, 0.3);
+      box-shadow: 0 4px 15px rgba(212, 37, 84, 0.3);
 
       &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(99, 179, 237, 0.4);
+        box-shadow: 0 6px 20px rgba(212, 37, 84, 0.4);
         opacity: 0.95;
       }
 
@@ -146,7 +146,7 @@
       transition: border-color 0.2s;
 
       &:focus-within {
-        border-color: #b794f4;
+        border-color: #D42554;
       }
 
       textarea {
