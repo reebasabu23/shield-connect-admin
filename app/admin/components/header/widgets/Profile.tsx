@@ -26,8 +26,8 @@ const Profile = () => {
           <Avatar data={{ avatar: data?.user?.avatar || null }} name={{ name: data?.user?.name }} />
           <div className="flex-grow-1">
             <span>{data?.user?.name}</span>
-            <p className="mb-0">
-              admin <ChevronDown size={14} className="middle" />
+            <p className="mb-0 d-flex align-items-center gap-1">
+              admin <ChevronDown size={14} />
             </p>
           </div>
         </div>

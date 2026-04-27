@@ -1,9 +1,10 @@
 import { User } from 'react-feather'
+import { ROUTES } from '@/lib/constants'
 
 export const ProfileHeaderData = [
   {
     id: 1,
-    link: `/profile`,
+    link: ROUTES.PROFILE,
     icon: <User />,
     text: 'Account',
   },
