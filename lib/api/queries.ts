@@ -13,7 +13,6 @@ import type {
   Params,
   PlanListResponse,
   ReportedAccountsResponse,
-  ReportReasonResponse,
   SettingsResponse,
   StickersListResponse,
   UserListResponse,
@@ -22,7 +21,7 @@ import type {
   LanguageListResponse,
   TranslationResponse,
 } from '@/lib/types/api'
-import { SMSGateway } from '@/lib/types/settings'
+import { SMSGateway, SMSGatewayListResponse } from '@/lib/types/settings'
 import get from './get'
 import { useApiGet } from './hooks'
 
@@ -47,10 +46,6 @@ const queries = {
   useGetContactInquiries: (params: Params) =>
     useApiGet<ContactInquiryResponse>([KEYS.ALL_CONTACT_INQUIRIES, params], () =>
       get(URL_KEYS.ContactInquiries.GetAllContactInquiries, params),
-    ),
-  useGetReportSettings: (params: Params) =>
-    useApiGet<ReportReasonResponse>([KEYS.ALL_REPORT_SETTINGS, params], () =>
-      get(URL_KEYS.ReportSettings.GetAllReportSettings, params),
     ),
   useGetSettings: () =>
     useApiGet<SettingsResponse>([KEYS.SETTINGS], () => get(URL_KEYS.Settings.GetSettings), {

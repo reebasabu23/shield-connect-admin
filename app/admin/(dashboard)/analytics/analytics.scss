@@ -37,18 +37,18 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        background: #f0fdf4;
-        color: #16a34a;
+        background: #e6fcf5;
+        color: #099268;
         padding: 6px 16px;
         border-radius: 20px;
         font-size: 14px;
         font-weight: 600;
-        border: 1px solid #dcfce7;
+        border: 1px solid #c3fae8;
 
         .dot {
           width: 8px;
           height: 8px;
-          background: #16a34a;
+          background: #099268;
           border-radius: 50%;
         }
       }
@@ -59,7 +59,7 @@
     .section-title {
       font-size: 13px;
       font-weight: 800;
-      color: #16a34a;
+      color: #099268;
       letter-spacing: 1px;
       margin-bottom: 20px;
       display: flex;
@@ -98,10 +98,10 @@
         font-size: 20px;
         flex-shrink: 0;
 
-        &.blue { background: #eff6ff; color: #2563eb; }
-        &.green { background: #f0fdf4; color: #16a34a; }
-        &.orange { background: #fff7ed; color: #f97316; }
-        &.purple { background: #faf5ff; color: #9333ea; }
+        &.blue { background: rgba(212, 37, 84, 0.05); color: var(--theme-default); }
+        &.green { background: #e6fcf5; color: #099268; }
+        &.orange { background: #fff9db; color: #f08c00; }
+        &.purple { background: rgba(235, 54, 103, 0.05); color: var(--theme-secondary); }
       }
 
       .card-info {
@@ -120,8 +120,8 @@
         .trend {
           font-size: 13px;
           font-weight: 700;
-          &.positive { color: #16a34a; }
-          &.negative { color: #dc2626; }
+          &.positive { color: #099268; }
+          &.negative { color: #fa5252; }
         }
       }
     }

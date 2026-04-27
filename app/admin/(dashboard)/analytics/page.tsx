@@ -32,7 +32,7 @@ const Analytics = () => {
         style: { colors: '#94a3b8' }
       }
     },
-    colors: ['#2563eb'],
+    colors: ['#D42554'],
     grid: {
       borderColor: '#f1f5f9',
       strokeDashArray: 4,
@@ -49,7 +49,7 @@ const Analytics = () => {
   const regions = [
     { name: 'North America', value: 423, percentage: 34, color: 'primary' },
     { name: 'Europe', value: 312, percentage: 25, color: 'secondary' },
-    { name: 'Asia Pacific', value: 287, percentage: 23, color: 'info' },
+    { name: 'Asia Pacific', value: 287, percentage: 23, color: 'success' },
     { name: 'Latin America', value: 156, percentage: 12, color: 'warning' },
     { name: 'Other', value: 69, percentage: 6, color: 'light' },
   ]
@@ -62,7 +62,7 @@ const Analytics = () => {
           <p>{t('real_time_moderation_insights_and_trends')}</p>
         </div>
         <div className="header-actions">
-          <Button color="primary" outline className="btn-export">
+          <Button color="primary" className="btn-export">
             <FaDownload /> {t('export_report')}
           </Button>
           <div className="operational-status">

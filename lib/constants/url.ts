@@ -62,12 +62,6 @@ const URL = {
     GetAllContactInquiries: 'inquiry/all',
     DeleteContactInquiries: 'inquiry/delete',
   },
-  ReportSettings: {
-    GetAllReportSettings: 'report/all',
-    CreateReportSettings: 'report/create',
-    UpdateReportSettings: 'report/:id/update',
-    DeleteReportSettings: 'report/delete',
-  },
   Settings: {
     GetSettings: 'setting',
     UpdateSettings: 'setting/update',

@@ -300,25 +300,6 @@ export interface ContactInquiryResponse {
   inquiries: SingleContactInquiry[]
 }
 
-export interface SingleReportReason {
-  id: number
-  title: string
-  created_at: string
-  updated_at: string
-}
-
-export interface ReportReasonResponse {
-  message: string
-  total: number
-  page: number
-  limit: number
-  reports: SingleReportReason[]
-}
-
-export interface ReportReasonPayload {
-  title: string
-}
-
 export interface SettingsResponse {
   settings: {
     id: number

@@ -190,13 +190,6 @@ export const SidebarMenuList: MenuItem[] = [
         type: 'link',
         path: ROUTES.MEDIA_SETTINGS,
       },
-      {
-        title: 'report_settings',
-        id: 16,
-        icon: 'coming-soon',
-        type: 'sub',
-        path: ROUTES.REPORT_SETTINGS,
-      },
     ],
   },
 ]

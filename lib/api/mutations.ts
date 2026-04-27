@@ -7,7 +7,6 @@ import type {
   Message,
   RemoveMemberResponse,
   ReportedAccountsPayload,
-  ReportReasonPayload,
   ResetPasswordPayload,
   StickersPayload,
   UpdateFAQPayload,
@@ -153,19 +152,6 @@ const mutations = {
   useDeleteContactInquiries: () =>
     useApiPost<{ ids: number[] }, void>([KEYS.DELETE_CONTACT_INQUIRIES, KEYS.ALL_CONTACT_INQUIRIES], (input) =>
       remove(URL_KEYS.ContactInquiries.DeleteContactInquiries, input),
-    ),
-  useDeleteReportSettings: () =>
-    useApiPost<{ ids: number[] }, void>([KEYS.DELETE_REPORT_SETTINGS, KEYS.ALL_REPORT_SETTINGS], (input) =>
-      remove(URL_KEYS.ReportSettings.DeleteReportSettings, input),
-    ),
-  useCreateReportSettings: () =>
-    useApiPost<ReportReasonPayload, void>([KEYS.CREATE_REPORT_SETTINGS, KEYS.ALL_REPORT_SETTINGS], (input) =>
-      post(URL_KEYS.ReportSettings.CreateReportSettings, input),
-    ),
-  useUpdateReportSettings: () =>
-    useApiPost<{ id: string; data: ReportReasonPayload }, void>(
-      [KEYS.UPDATE_REPORT_SETTINGS, KEYS.ALL_REPORT_SETTINGS],
-      ({ id, data }) => put(URL_KEYS.ReportSettings.UpdateReportSettings.replace(':id', id.toString()), data),
     ),
   useDeleteGroups: () =>
     useApiPost<{ ids: number[] }, void>([KEYS.DELETE_GROUPS, KEYS.ALL_GROUPS], (input) =>
