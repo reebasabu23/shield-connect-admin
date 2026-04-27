@@ -3,6 +3,8 @@ import { Image } from '@/app/components/image'
 import { queries } from '@/lib/api'
 import { useRouter } from 'next/navigation'
 
+import { ROUTES } from '@/lib/constants'
+
 const WelcomeCard = () => {
   const { data } = queries.useGetUserDetails()
   const router = useRouter()
@@ -16,7 +18,7 @@ const WelcomeCard = () => {
           <div className="welcome-content">
             <h2>Welcome {data?.user?.name || 'Admin'}</h2>
             <p>Here’s what’s happening in your chat app today</p>
-            <Button onClick={() => router.push('/profile')}>View Profile</Button>
+            <Button onClick={() => router.push(ROUTES.PROFILE)}>View Profile</Button>
           </div>
         </CardBody>
       </Card>
