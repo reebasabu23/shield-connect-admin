@@ -23,12 +23,14 @@ const Profile = () => {
     <>
       <li className="profile-nav onhover-dropdown pe-0 py-0">
         <div className="d-flex align-items-center profile-media">
-          <Avatar data={{ avatar: data?.user?.avatar || null }} name={{ name: data?.user?.name }} />
-          <div className="flex-grow-1">
-            <span>{data?.user?.name}</span>
-            <p className="mb-0 d-flex align-items-center gap-1">
-              admin <ChevronDown size={14} />
-            </p>
+          <Avatar data={{ avatar: data?.user?.avatar || null }} name={{ name: data?.user?.name }} height={38} width={38} />
+          <div className="flex-grow-1 ms-2">
+            <div className="d-flex align-items-center gap-2">
+              <span className="fw-600 mb-0" style={{ fontSize: '14px', whiteSpace: 'nowrap' }}>{data?.user?.name}</span>
+              <span className="text-muted d-flex align-items-center gap-1" style={{ fontSize: '11px', whiteSpace: 'nowrap' }}>
+                Admin <ChevronDown size={12} />
+              </span>
+            </div>
           </div>
         </div>
 
