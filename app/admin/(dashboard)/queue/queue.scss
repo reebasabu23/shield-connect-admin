@@ -13,9 +13,10 @@
       transition: all 0.3s ease;
 
       &.active {
-        background-color: #f0f7ff;
-        color: #1a73e8;
-        border-color: #1a73e8;
+        background: var(--theme-gradient);
+        color: #fff;
+        border-color: transparent;
+        box-shadow: 0 4px 12px rgba(212, 37, 84, 0.2);
       }
 
       &:hover:not(.active) {
@@ -308,13 +309,15 @@
         align-items: center;
         gap: 12px;
 
-        .btn-filter, .btn-refresh {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          font-weight: 500;
-          border-radius: 10px;
-          padding: 8px 16px;
+        .btn-refresh {
+          background: var(--theme-gradient) !important;
+          border: none !important;
+          color: white !important;
+          box-shadow: 0 4px 15px rgba(212, 37, 84, 0.25);
+          &:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+          }
         }
 
         .btn-filter {
@@ -327,8 +330,8 @@
     }
 
     .guarantee-banner {
-      background: #f0f7ff;
-      border: 1px solid #d0e3ff;
+      background: #fff5f7;
+      border: 1px solid #ffe3e9;
       border-radius: 16px;
       padding: 20px;
       display: flex;
@@ -343,14 +346,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #1a73e8;
+        color: var(--theme-default);
         font-size: 20px;
         flex-shrink: 0;
+        box-shadow: 0 2px 8px rgba(212, 37, 84, 0.1);
       }
 
       .banner-content {
         h4 {
-          color: #1a73e8;
+          color: var(--theme-default);
           font-size: 16px;
           font-weight: 700;
           margin-bottom: 4px;
@@ -367,9 +371,9 @@
     .stats-grid {
       .stat-card {
         &.pending-review {
-          background: #f0f7ff;
-          border-color: #d0e3ff;
-          .value { color: #1a73e8; }
+          background: #fff5f7;
+          border-color: #ffe3e9;
+          .value { color: var(--theme-default); }
         }
         &.reviewed-today {
           background: #f0fff4;
