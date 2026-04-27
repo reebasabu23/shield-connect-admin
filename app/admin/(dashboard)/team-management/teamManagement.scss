@@ -10,7 +10,6 @@
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 4px;
-        color: #1a1a1a;
       }
       p {
         color: #666;
@@ -24,7 +23,7 @@
       gap: 16px;
 
       .invite-btn {
-        background: #1a73e8;
+        background: var(--theme-gradient);
         color: #fff;
         border: none;
         border-radius: 12px;
@@ -34,9 +33,11 @@
         align-items: center;
         gap: 8px;
         transition: all 0.2s;
+        box-shadow: 0 4px 15px rgba(212, 37, 84, 0.25);
 
         &:hover {
-          background: #1557b0;
+          opacity: 0.9;
+          transform: translateY(-1px);
         }
       }
 
@@ -142,7 +143,6 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        color: #1a1a1a;
       }
       .icon {
         color: #1a73e8;
@@ -183,7 +183,10 @@
       }
       .name {
         font-weight: 700;
-        color: #1a1a1a;
+
+        body.dark-only & {
+          color: #ffffff;
+        }
       }
     }
 

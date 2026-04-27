@@ -13,6 +13,9 @@
       transition: all 0.3s ease;
 
       &.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background: var(--theme-gradient);
         color: #fff;
         border-color: transparent;
@@ -37,7 +40,6 @@
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 4px;
-        color: #1a1a1a;
       }
       p {
         color: #666;
@@ -310,6 +312,10 @@
         gap: 12px;
 
         .btn-refresh {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
           background: var(--theme-gradient) !important;
           border: none !important;
           color: white !important;
@@ -321,6 +327,9 @@
         }
 
         .btn-filter {
+          display: flex;
+          align-items: center;
+          gap: 8px;
           background: #fff;
           border-color: #eee;
           color: #666;
